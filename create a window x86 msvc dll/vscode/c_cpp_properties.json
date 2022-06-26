@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                //下面这两行是为了不让vscode不报错的，实际上不要也可以，否则有红线显示
+                "C:\\Users\\Administrator\\Desktop\\wxWidgets-3.1.7\\include",
+                "C:\\Users\\Administrator\\Desktop\\wxWidgets-3.1.7\\lib\\gcc_dll\\mswu"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.19041.0",
+            "compilerPath": "C:/mingw32/bin/g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x86"
+        }
+    ],
+    "version": 4
+}
