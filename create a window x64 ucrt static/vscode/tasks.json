@@ -1,0 +1,75 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe 生成活动文件",
+			"command": "C:\\mingw64\\bin\\g++.exe",
+			"args": [
+				//指定子系统是窗口
+				"-Wl,--subsystem,windows", // or -mwindows
+
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+
+				//包含头文件
+				"-I",
+                "C:\\Users\\Administrator\\Desktop\\wxWidgets-3.1.7\\include",
+				"-I",
+                "C:\\Users\\Administrator\\Desktop\\wxWidgets-3.1.7\\lib\\gcc_lib\\mswu",
+
+				//指定库文件目录
+				"-L",
+				"C:\\Users\\Administrator\\Desktop\\wxWidgets-3.1.7\\lib\\gcc_lib",
+
+				//库文件9个，我们编译出来的静态库文件
+				//.a格式是gcc的静态库文件
+				"-lwxexpat",
+				"-lwxjpeg",
+				"-lwxmsw31u",
+				"-lwxmsw31u_gl",
+				"-lwxpng",
+				"-lwxregexu",
+				"-lwxscintilla",
+				"-lwxtiff",
+				"-lwxzlib",
+
+				//链接文件20个 这些是gcc编译器自带的.a文件，gcc静态库
+				"-lkernel32",
+				"-luser32",
+				"-lgdi32",
+				"-lcomdlg32",
+				"-lwinspool",
+				"-lwinmm",
+				"-lshell32",
+				"-lshlwapi",
+				"-lcomctl32",
+				"-lole32",
+				"-loleaut32",
+				"-luuid",
+				"-lrpcrt4",
+				"-ladvapi32",
+				"-lversion",
+				"-lws2_32",
+				"-lwininet",
+				"-loleacc",
+				"-luxtheme",
+				"-limm32",
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "编译器: C:\\mingw64\\bin\\g++.exe"
+		}
+	]
+}
